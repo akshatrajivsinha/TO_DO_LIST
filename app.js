@@ -11,6 +11,7 @@ app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
+mongoose.set("strictQuery",true);
 mongoose.connect("mongodb+srv://admin-Akshat:Akshatsinha2000@cluster0.dq8nn9e.mongodb.net/ItemDB",{useNewUrlParser:true});
 
 const itemschema = new mongoose.Schema({
